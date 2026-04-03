@@ -39,5 +39,10 @@ const SITE_DATA = {
     { song: 'Perfect', artist: 'Ed Sheeran', src: 'https://res.cloudinary.com/demo/video/upload/perfect.mp3' },
     { song: "Can't Help Falling in Love", artist: 'Elvis Presley', src: 'https://res.cloudinary.com/demo/video/upload/cant_help_falling_in_love.mp3' },
     { song: 'All of Me', artist: 'John Legend', src: 'https://res.cloudinary.com/demo/video/upload/all_of_me.mp3' },
-  ]
+  ],
+
+  // ── Slideshow Dynamic Count ──
+  // Upload your photos to "slideshow/" folder in Cloudinary named 1, 2, 3...
+  // Then change this number to match how many photos you have!
+  slideshowCount: 7
 };

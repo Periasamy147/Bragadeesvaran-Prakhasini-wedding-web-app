@@ -116,43 +116,8 @@
     </div>
 
     <div class="slideshow reveal">
-      <div class="slideshow__track">
-
-        <figure class="slideshow__slide is-active">
-          <img src="Images/foto-pettine-IfjHaIoAoqE-unsplash.jpg" data-img="galleryWalking" alt="Walking together into the horizon" />
-          <figcaption>Where every road leads — together</figcaption>
-        </figure>
-
-        <figure class="slideshow__slide">
-          <img src="Images/beatriz-perez-moya-M2T1j-6Fn8w-unsplash.jpg" data-img="galleryRings" alt="Wedding rings on flowers" />
-          <figcaption>A promise in bloom</figcaption>
-        </figure>
-
-        <figure class="slideshow__slide">
-          <img src="Images/kerri-shaver-xepikEyPgmI-unsplash.jpg" data-img="galleryFabric" alt="Soft bridal fabric and flower" />
-          <figcaption>Every detail, with love</figcaption>
-        </figure>
-
-        <figure class="slideshow__slide">
-          <img src="Images/nowbelov-Zn3QjwsN2Q0-unsplash.jpg" data-img="galleryBlossom" alt="Cherry blossoms" />
-          <figcaption>Blooming like the start of us</figcaption>
-        </figure>
-
-        <figure class="slideshow__slide">
-          <img src="Images/tom-the-photographer-8yPA6ZYq0-s-unsplash.jpg" data-img="galleryBride" alt="Bride with bouquet" />
-          <figcaption>She said yes</figcaption>
-        </figure>
-
-        <figure class="slideshow__slide">
-          <img src="Images/cody-chan-7jgtAhJkjwk-unsplash.jpg" data-img="galleryTable" alt="Wedding reception table" />
-          <figcaption>The table is set, the night awaits</figcaption>
-        </figure>
-
-        <figure class="slideshow__slide">
-          <img src="Images/nathan-dumlao-5BB_atDT4oA-unsplash.jpg" data-img="galleryGolden" alt="Couple with bouquet at golden hour" />
-          <figcaption>Golden hour, golden hearts</figcaption>
-        </figure>
-
+      <div class="slideshow__track" id="slideshow-track">
+        <!-- Slides are generated dynamically via js/slideshow-builder.js -->
       </div>
 
       <button class="slideshow__btn slideshow__btn--prev" aria-label="Previous">&#8249;</button>
@@ -295,6 +260,18 @@
 
     </div>
   </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner reveal">
+      <p class="footer__text">
+        Created with ❤️ by 
+        <a href="https://www.instagram.com/perrie_d.platypus" target="_blank" rel="noopener noreferrer" class="footer__link">
+          @perrie_d.platypus
+        </a>
+      </p>
+    </div>
+  </footer>
 
 
 
@@ -366,6 +343,7 @@
   <script src="js/site-data.js"></script>
   <script src="js/data-injector.js"></script>
   <script src="js/config.js"></script>
+  <script src="js/slideshow-builder.js"></script>
   <script src="js/images.js"></script>
   <script src="js/particles.js"></script>
   <script src="js/ui.js"></script>

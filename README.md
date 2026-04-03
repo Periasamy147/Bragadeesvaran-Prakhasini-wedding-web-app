@@ -51,4 +51,3 @@ The project is already configured for deployment on **Netlify** via the `netlify
 ## 🎨 Customization
 * **Styles**: You can edit `css/style.css` to modify the colors and layout. The current theme seems to be "Lavender & blush pink".
 * **Interactivity**: You can tweak the JavaScript files in the `js/` folder to modify the behavior of the countdown or the particle background.
-
