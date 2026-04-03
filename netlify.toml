@@ -1,31 +1,28 @@
 [build]
+  # The directory that contains the static files to publish
   publish = "."
+  # No build step needed for a pure static site
+  command = "echo 'No build step required'"
 
-# Security + performance headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options        = "SAMEORIGIN"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy        = "strict-origin-when-cross-origin"
+# Optional redirect rules (if needed)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
+# CSS and JS caching (must-revalidate)
 [[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
-
-[[headers]]
-  for = "/js/*"
+  for = "/css/*.css"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+[[headers]]
+  for = "/js/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Images caching (7 days)
 [[headers]]
   for = "/Images/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
-
-# Redirect bare domain to www (optional)
-# [[redirects]]
-#   from   = "https://yourdomain.com/*"
-#   to     = "https://www.yourdomain.com/:splat"
-#   status = 301
