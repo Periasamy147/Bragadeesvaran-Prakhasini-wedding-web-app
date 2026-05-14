@@ -30,7 +30,7 @@
   <!-- Volume Notice -->
   <div class="volume-notice" id="volume-notice" aria-live="polite">
     <span class="volume-notice__icon">&#9835;</span>
-    Turn up your volume for the best experience
+    Turn up your volume &amp; tap ✕ to begin
     <button class="volume-notice__close" id="volume-notice-close" aria-label="Dismiss">&#10005;</button>
   </div>
 
@@ -320,6 +320,9 @@
   <script>
     document.getElementById('volume-notice-close').addEventListener('click', function() {
       document.getElementById('volume-notice').classList.add('is-hidden');
+      // Start music on this interaction since browsers require a user gesture
+      var btn = document.getElementById('player-play');
+      if (btn) btn.click();
     });
   </script>
   <script>
