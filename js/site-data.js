@@ -29,7 +29,7 @@ const SITE_DATA = {
   // ── Music Tracklist ──
   // Place your MP3 file in the "audio/" folder in the project root.
   tracks: [
-    { song: 'A Thousand Years', artist: 'Christina Perri', src: 'audio/a-thousand-years.mp3' },
+    { song: 'A Thousand Years', artist: 'Christina Perri', src: 'Song/Thousand-Years.mp3' },
   ],
 
   // ── Slideshow Dynamic Count ──
