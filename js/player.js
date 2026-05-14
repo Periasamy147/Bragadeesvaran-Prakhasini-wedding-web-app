@@ -78,8 +78,16 @@
   prevBtn.addEventListener('click', () => load(current - 1));
   nextBtn.addEventListener('click', () => load(current + 1));
 
-  // ── Resume last song ──
+  // ── Autoplay on load; fall back to first interaction if browser blocks ──
   const saved = parseInt(localStorage.getItem('player-track'), 10);
   const validIndex = Number.isFinite(saved) && saved >= 0 && saved < tracks.length ? saved : 0;
-  load(validIndex);
+  load(validIndex, false);
+
+  audio.play().catch(() => {
+    const startOnInteraction = () => {
+      audio.play().catch(() => {});
+      ['click', 'touchstart', 'keydown'].forEach(e => document.removeEventListener(e, startOnInteraction));
+    };
+    ['click', 'touchstart', 'keydown'].forEach(e => document.addEventListener(e, startOnInteraction, { once: true }));
+  });
 })();
