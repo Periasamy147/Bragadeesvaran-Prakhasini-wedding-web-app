@@ -15,8 +15,8 @@ const CLD = {
 };
 
 const IMAGES = {
-  groom: CLD.url('groom', 'w_600,h_800,c_fill,g_face'),
-  bride: CLD.url('bride', 'w_600,h_800,c_fill,g_face'),
+  groom: 'Images/IMG_1879.JPG.jpeg',
+  bride: 'Images/IMG_1573.JPG.jpeg',
 };
 
 // Note: Slideshow images are now discovered and injected automatically 

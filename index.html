@@ -27,6 +27,13 @@
   </script>
 </head>
 <body>
+  <!-- Volume Notice -->
+  <div class="volume-notice" id="volume-notice" aria-live="polite">
+    <span class="volume-notice__icon">&#9835;</span>
+    Turn up your volume for the best experience
+    <button class="volume-notice__close" id="volume-notice-close" aria-label="Dismiss">&#10005;</button>
+  </div>
+
   <!-- Scroll Progress -->
   <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
@@ -115,15 +122,8 @@
       <div class="memories__divider"></div>
     </div>
 
-    <div class="slideshow reveal">
-      <div class="slideshow__track" id="slideshow-track">
-        <!-- Slides are generated dynamically via js/slideshow-builder.js -->
-      </div>
-
-      <button class="slideshow__btn slideshow__btn--prev" aria-label="Previous">&#8249;</button>
-      <button class="slideshow__btn slideshow__btn--next" aria-label="Next">&#8250;</button>
-
-      <div class="slideshow__dots"></div>
+    <div class="memories__photo reveal">
+      <img src="Images/IMG_1569.JPG.jpeg" alt="Bragadeesvaran &amp; Prakhasini" class="memories__single-img" />
     </div>
   </section>
 
@@ -139,54 +139,41 @@
 
       <article class="timeline__item reveal">
         <div class="timeline__dot"></div>
-        <time class="timeline__date">March 2019</time>
-        <h3 class="timeline__milestone">The First Hello</h3>
+        <time class="timeline__date">September 25, 2025</time>
+        <h3 class="timeline__milestone">Where It All Began</h3>
         <p class="timeline__story">
-          A mutual friend's dinner party, a corner seat, and a conversation
-          that stretched well past midnight. Neither of us wanted to be there
-          that night. Now we can't imagine it any other way.
+          A shared prayer in the quiet of the temple and a meeting that felt like destiny.
+          In that moment, a silent "yes" paved the way for a beautiful new beginning.
         </p>
       </article>
 
       <article class="timeline__item reveal reveal--delay-1">
         <div class="timeline__dot"></div>
-        <time class="timeline__date">August 2019</time>
-        <h3 class="timeline__milestone">First Trip Together</h3>
+        <time class="timeline__date">The Journey Since</time>
+        <h3 class="timeline__milestone">From Shy Words to Certain Hearts</h3>
         <p class="timeline__story">
-          A spontaneous weekend to the coast. One tiny rental car, two wrong
-          turns, and a sunset that made everything feel certain. We didn't
-          say it out loud yet — but we both knew.
+          What began with family blossomed into a deep, quiet friendship.
+          From shy first words to certain hearts, we found our rhythm in the most beautiful way.
         </p>
       </article>
 
       <article class="timeline__item reveal">
         <div class="timeline__dot"></div>
-        <time class="timeline__date">February 2021</time>
-        <h3 class="timeline__milestone">Moving In</h3>
+        <time class="timeline__date">May 27, 2026</time>
+        <h3 class="timeline__milestone">The Reception</h3>
         <p class="timeline__story">
-          Cardboard boxes, mismatched mugs, and a bookshelf we built
-          completely wrong on the first try. Home stopped being a place
-          and started being a person.
+          A night of celebration, laughter, and light. We gather with those we love
+          to toast to the joy of our union and the adventures that lie ahead.
         </p>
       </article>
 
       <article class="timeline__item reveal reveal--delay-1">
         <div class="timeline__dot"></div>
-        <time class="timeline__date">December 2023</time>
-        <h3 class="timeline__milestone">The Proposal</h3>
+        <time class="timeline__date">May 28, 2026</time>
+        <h3 class="timeline__milestone">The Muhurtham</h3>
         <p class="timeline__story">
-          On the rooftop where we had our third date. Fairy lights, cold air,
-          and shaking hands. She said yes before he finished the sentence.
-        </p>
-      </article>
-
-      <article class="timeline__item reveal">
-        <div class="timeline__dot"></div>
-        <time class="timeline__date">June 2025</time>
-        <h3 class="timeline__milestone">The Wedding</h3>
-        <p class="timeline__story">
-          And now, surrounded by everyone we love, we begin the best
-          chapter yet.
+          At the most auspicious hour, under the sacred canopy. Two souls becoming one,
+          beginning a lifetime of love with the blessings of the divine and our elders.
         </p>
       </article>
 
@@ -232,9 +219,18 @@
         <div class="event__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2v3M16 2v3M3 8h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01"/></svg>
         </div>
-        <h3 class="event__card-label">Date &amp; Time</h3>
-        <p class="event__card-value" data-site="eventDate"></p>
-        <p class="event__card-sub" data-site="eventTimeStr"></p>
+        <h3 class="event__card-label">The Reception</h3>
+        <p class="event__card-value">May 27, 2026</p>
+        <p class="event__card-sub">Wednesday · 6:00 PM onwards</p>
+      </div>
+
+      <div class="event__card">
+        <div class="event__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="event__card-label">The Muhurtham</h3>
+        <p class="event__card-value">May 28, 2026</p>
+        <p class="event__card-sub">Thursday · Auspicious time at 7:35 AM</p>
       </div>
 
       <div class="event__card">
@@ -249,15 +245,6 @@
         <!-- /EXP: MAP -->
       </div>
 
-      <div class="event__card">
-        <div class="event__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z"/></svg>
-        </div>
-        <h3 class="event__card-label">Dress Code</h3>
-        <p class="event__card-value" data-site="dressCodeTitle"></p>
-        <p class="event__card-sub" data-site="dressCodeSub"></p>
-      </div>
-
     </div>
   </section>
   
@@ -265,10 +252,13 @@
   <footer class="footer">
     <div class="footer__inner reveal">
       <p class="footer__text">
-        Created with ❤️ by 
+        Created with ❤️ by
         <a href="https://www.instagram.com/perrie_d.platypus" target="_blank" rel="noopener noreferrer" class="footer__link">
           @perrie_d.platypus
         </a>
+      </p>
+      <p class="footer__contact">
+        <a href="tel:+918939104096" class="footer__link">+91 89391 04096</a>
       </p>
     </div>
   </footer>
@@ -330,6 +320,11 @@
 
 
   <script>
+    document.getElementById('volume-notice-close').addEventListener('click', function() {
+      document.getElementById('volume-notice').classList.add('is-hidden');
+    });
+  </script>
+  <script>
     const loader = document.getElementById('loader');
     document.body.style.overflow = 'hidden';
     setTimeout(() => {
@@ -343,7 +338,6 @@
   <script src="js/site-data.js"></script>
   <script src="js/data-injector.js"></script>
   <script src="js/config.js"></script>
-  <script src="js/slideshow-builder.js"></script>
   <script src="js/images.js"></script>
   <script src="js/particles.js"></script>
   <script src="js/ui.js"></script>
@@ -351,7 +345,6 @@
   <script src="js/countdown.js"></script>
   <script src="js/cursor.js"></script>
   <script src="js/lightbox.js"></script>
-  <script src="js/slideshow.js"></script>
   <script src="js/player.js"></script>
 </body>
 </html>
